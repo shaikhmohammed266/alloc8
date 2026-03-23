@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* ============================================================
+   DARK THEME (default)
+   ============================================================ */
+:root {
+  --bg:        #07080f;
+  --bg2:       #0c0e1a;
+  --bg3:       #111426;
+  --card:      #141828;
+  --card2:     #1a1f35;
+  --border:    #232840;
+  --border2:   #2c3354;
+  --text:      #eceef8;
+  --text2:     #a0a8cc;
+  --accent:    #4f7cff;
+  --accent2:   #7c4fff;
+  --red:       #ff4f6d;
+  --amber:     #ffb347;
+  --green:     #3dd68c;
+  --teal:      #2dd4bf;
+  --nav-bg:    rgba(7,8,15,0.92);
+  --map-fill:  #181d35;
+  --map-stroke:#2c3354;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md: 0 8px 32px rgba(0,0,0,0.5);
+  --shadow-lg: 0 24px 64px rgba(0,0,0,0.6);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+/* ============================================================
+   LIGHT THEME — beautiful, clean, colorful
+   ============================================================ */
+[data-theme="light"] {
+  --bg:        #f7f8ff;
+  --bg2:       #eef0fd;
+  --bg3:       #e6e9fb;
+  --card:      #ffffff;
+  --card2:     #f3f5fe;
+  --border:    #dde2f5;
+  --border2:   #c5cdee;
+  --text:      #111827;
+  --text2:     #5b6480;
+  --accent:    #2563eb;
+  --accent2:   #7c3aed;
+  --red:       #dc2626;
+  --amber:     #d97706;
+  --green:     #059669;
+  --teal:      #0891b2;
+  --nav-bg:    rgba(247,248,255,0.95);
+  --map-fill:  #dce8ff;
+  --map-stroke:#93aee8;
+  --shadow-sm: 0 2px 8px rgba(37,99,235,0.08);
+  --shadow-md: 0 8px 32px rgba(37,99,235,0.10);
+  --shadow-lg: 0 24px 64px rgba(37,99,235,0.12);
+}
+
+/* ============================================================
+   RESET
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
+p { line-height: 1.7; }
+a { color: var(--accent); text-decoration: none; }
+
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+.flex       { display: flex; }
+.flex-col   { display: flex; flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center  { justify-content: center; }
+.gap-8  { gap: 8px; }
+.gap-12 { gap: 12px; }
+.gap-16 { gap: 16px; }
+.gap-20 { gap: 20px; }
+.mt-8  { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+.w-full { width: 100%; }
+.text-muted { color: var(--text2); }
+.text-sm { font-size: 13px; }
+.text-xs { font-size: 12px; }
+.font-600 { font-weight: 600; }
+.font-700 { font-weight: 700; }
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 79, 109, 0.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(255, 79, 109, 0); }
+}
+@keyframes markerPop {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+@keyframes markerRing {
+  0%   { r: 12; opacity: 0.7; }
+  100% { r: 24; opacity: 0; }
+}
+@keyframes slidePanel {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.anim-fade-up { animation: fadeUp 0.4s ease both; }
+.anim-fade-in { animation: fadeIn 0.3s ease both; }
+
+/* stagger helpers */
+.delay-1 { animation-delay: 0.05s; }
+.delay-2 { animation-delay: 0.10s; }
+.delay-3 { animation-delay: 0.15s; }
+.delay-4 { animation-delay: 0.20s; }

@@ -1,0 +1,40 @@
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  transition: background 0.4s, border-color 0.4s;
+}
+.hover:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px rgba(79,124,255,0.1);
+}
+
+/* metric card */
+.metric {
+  background: var(--card2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.4s;
+}
+.mLabel {
+  font-size: 13px;
+  color: var(--text2);
+  font-weight: 500;
+}
+.mValue {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 6px;
+}
+.mDelta {
+  font-size: 12px;
+  margin-top: 4px;
+}
+.up   { color: var(--green); }
+.down { color: var(--red); }
+.flat { color: var(--text2); }

@@ -1,0 +1,47 @@
+.wrap {
+  padding: 20px;
+  background: var(--bg3);
+  transition: background 0.4s;
+}
+
+.svg {
+  width: 100%;
+  max-height: 440px;
+}
+
+.mapFill {
+  fill: var(--map-fill);
+  stroke: var(--map-stroke);
+  stroke-width: 1.5px;
+  transition: fill 0.4s, stroke 0.4s;
+}
+
+.mapLine {
+  stroke: var(--map-stroke);
+  stroke-width: 0.5px;
+  fill: none;
+  opacity: 0.5;
+  transition: stroke 0.4s;
+}
+
+.marker {
+  cursor: pointer;
+  animation: markerPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.marker:hover circle:last-of-type {
+  r: 8;
+}
+
+.ring {
+  animation: markerRing 2.2s ease-out infinite;
+}
+
+@keyframes markerPop {
+  from { transform: scale(0); transform-origin: center; }
+  to   { transform: scale(1); transform-origin: center; }
+}
+
+@keyframes markerRing {
+  0%   { r: 12; opacity: 0.6; }
+  100% { r: 24; opacity: 0; }
+}

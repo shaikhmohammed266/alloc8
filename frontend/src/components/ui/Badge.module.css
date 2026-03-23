@@ -1,0 +1,19 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.high     { background: rgba(255,79,109,.12);  color: var(--red);    border: 1px solid rgba(255,79,109,.3);  }
+.medium   { background: rgba(255,179,71,.12);  color: var(--amber);  border: 1px solid rgba(255,179,71,.3);  }
+.low      { background: rgba(61,214,140,.12);  color: var(--green);  border: 1px solid rgba(61,214,140,.3);  }
+.active   { background: rgba(79,124,255,.12);  color: var(--accent); border: 1px solid rgba(79,124,255,.3);  }
+.resolved { background: rgba(61,214,140,.12);  color: var(--green);  border: 1px solid rgba(61,214,140,.3);  }
+.pending  { background: rgba(255,179,71,.12);  color: var(--amber);  border: 1px solid rgba(255,179,71,.3);  }
+.default  { background: var(--card2);          color: var(--text2);  border: 1px solid var(--border);        }
+.admin    { background: rgba(79,124,255,.15);  color: var(--accent); }
+.citizen  { background: rgba(45,212,191,.15);  color: var(--teal);   }
+.volunteer{ background: rgba(61,214,140,.15);  color: var(--green);  }
